@@ -1,0 +1,18 @@
+---
+# vars file for multivm-deploy
+ resource_group: Test
+ vnet_name: Test_vnet
+ vm_user: azureuser
+ subnet_name: Test_subnet
+ storage_name: testingstore
+ vm_password: Test@123!Qaz
+ instances:
+     - win1
+     - win2
+     - win3
+     - win4
+ location: eastus
+    # Below is UTF-16 Base64 encoding for:
+    #   Invoke-Expression -Command ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/ansible/ansible/devel/examples/scripts/ConfigureRemotingForAnsible.ps1')); Enable-WSManCredSSP -Role Server -Force
+ winrm_enable_script: SQBuAHYAbwBrAGUALQBFAHgAcAByAGUAcwBzAGkAbwBuACAALQBDAG8AbQBtAGEAbgBkACAAKAAoAE4AZQB3AC0ATwBiAGoAZQBjAHQAIABTAHkAcwB0AGUAbQAuAE4AZQB0AC4AVwBlAGIAQwBsAGkAZQBuAHQAKQAuAEQAbwB3AG4AbABvAGEAZABTAHQAcgBpAG4AZwAoACcAaAB0AHQAcABzADoALwAvAHIAYQB3AC4AZwBpAHQAaAB1AGIAdQBzAGUAcgBjAG8AbgB0AGUAbgB0AC4AYwBvAG0ALwBhAG4AcwBpAGIAbABlAC8AYQBuAHMAaQBiAGwAZQAvAGQAZQB2AGUAbAAvAGUAeABhAG0AcABsAGUAcwAvAHMAYwByAGkAcAB0AHMALwBDAG8AbgBmAGkAZwB1AHIAZQBSAGUAbQBvAHQAaQBuAGcARgBvAHIAQQBuAHMAaQBiAGwAZQAuAHAAcwAxACcAKQApADsAIABFAG4AYQBiAGwAZQAtAFcAUwBNAGEAbgBDAHIAZQBkAFMAUwBQACAALQBSAG8AbABlACAAUwBlAHIAdgBlAHIAIAAtAEYAbwByAGMAZQA=
+

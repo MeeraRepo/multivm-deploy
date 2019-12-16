@@ -1,0 +1,6 @@
+---
+- name: provision new azure hosts
+  hosts: localhost
+  connection: local
+  roles:
+     - { role: multivm-deploy } 

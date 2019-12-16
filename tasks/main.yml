@@ -1,0 +1,5 @@
+- name: delete Azure Resource Group
+  azure_rm_resourcegroup:
+    name: "{{ resource_group }}"
+    force_delete_nonempty: yes
+    state: absent
